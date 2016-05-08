@@ -37,15 +37,15 @@
     <div class="alert alert-info fade in" id="txt_log">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong><span id="txt_log_title">Usage:</span></strong>
-        <span id="txt_log_msg">Enter the name, set point "Conference" button</span>
+        <span id="txt_log_msg">Enter your name, then click the "Join Chat" button</span>
     </div>
 
     <div class="control-group">
         <div class="form-inline">
-            <button class="btn input-small" id="btn_video_settings">Camera</button>
-            <button class="btn input-small" id="btn_audio_settings">Microphone</button>
+            <button class="btn input-small" id="btn_video_settings">Video</button>
+            <button class="btn input-small" id="btn_audio_settings">Audio</button>
             <input type="text" id="txt_name" class="input-large" placeholder="Please enter your name..." value=""></input>
-            <button class="btn input-small" id="btn_join">Join Conference</button>
+            <button class="btn input-small" id="btn_join">Join Chat</button>
             <input type="text" id="txt_url" class="input-mini hide" value=""></input>
         </div>
     </div>
@@ -55,7 +55,7 @@
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <span class="accordion-toggle">
-                            <strong>[My] Local Camera</strong>
+                            <strong>Local Publisher</strong>
                         </span>
                     </div>
                     <div class="accordion-body collapse in">
@@ -69,7 +69,7 @@
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <span class="accordion-toggle">
-                            <strong>[L] Remote Server</strong>
+                            <strong>Realtime Player</strong>
                             <a id="realtime_player_url" href="#" data-toggle="tooltip" data-placement="top" title="">
                                 Playback Address<img src="img/tooltip.png"/>
                             </a>
@@ -111,7 +111,7 @@
     <div id="video_modal" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Video Coding</h3>
+            <h3>Video Setup</h3>
         </div>
         <div class="modal-body">
             <div class="form-horizontal">
@@ -183,7 +183,7 @@
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="sl_fps">
-                        Frame Rate
+                        Framerate
                         <a id="sl_fps_tips" href="#" data-toggle="tooltip" data-placement="right" title="">
                             <img src="img/tooltip.png"/>
                         </a>
@@ -206,13 +206,13 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Set up</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Apply</button>
         </div>
     </div>
     <div id="audio_modal" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Audio Coding</h3>
+            <h3>Audio Setup</h3>
         </div>
         <div class="modal-body">
             <div class="form-horizontal">
@@ -229,7 +229,7 @@
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="sl_acodec">
-                        Coding
+                        Codec
                         <a id="sl_acodec_tips" href="#" data-toggle="tooltip" data-placement="right" title="">
                             <img src="img/tooltip.png"/>
                         </a>
@@ -241,7 +241,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Set Up</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Apply</button>
         </div>
     </div>
     <hr/>
@@ -395,7 +395,7 @@
             },
             error      : function(ret) {
                 setTimeout(refresh, 5000);
-                warn(101, "Discover meeting room failed:" + JSON.stringify(ret));
+                warn(101, "Discover meeting room failed: " + JSON.stringify(ret));
             },
             success    : function(ret) {
                 if(0 != ret["code"]) {
@@ -459,11 +459,11 @@
             complete   : function() {
             },
             error      : function(ret) {
-                warn(105, "Update room information failed:" + JSON.stringify(ret));
+                warn(105, "Update room information failed: " + JSON.stringify(ret));
             },
             success    : function(ret) {
                 if(0 != ret["code"]) {
-                    warn(106, "Update room information failed:: " + JSON.stringify(ret));
+                    warn(106, "Update room information failed: " + JSON.stringify(ret));
                     return;
                 }
             }
@@ -661,7 +661,7 @@
     }
     function on_user_exit_chat(complete_pfn) {
         srs_publisher.stop();
-        $("#btn_join").text("Join Conference");
+        $("#btn_join").text("Join Chat");
 
         if (realtime_player) {
             realtime_player.stop();
@@ -714,7 +714,7 @@
                     warn(104, "Exit Meeting Room failure");
                     return;
                 }
-                info("Exit the conference room Success");
+                info("Left Chat Successsfully");
             }
         });
     }
@@ -759,7 +759,7 @@
                 }
             },
             error      : function(ret) {
-                warn(105, "Failed to create a room :" + JSON.stringify(ret));
+                warn(105, "Failed to create a room: " + JSON.stringify(ret));
             },
             success    : function(ret) {
                 if(0 != ret["code"]) {
@@ -772,9 +772,9 @@
                 // success, start publish.
                 self_chat = chat;
 
-                $("#btn_join").text("Exit meeting");
+                $("#btn_join").text("Leave Chat");
 
-                info("He began to push flow to the server . Please wear headphones chat , otherwise the speaker 's voice into the microphone will cause echo.");
+                info("Pushing steam to the server.  Please use a headset to chat, otherwise the audio from the speaker will be picked up by the microphone and cause an echo loop.");
                 srs_publisher.publish(url, vcodec, acodec);
 
                 if (realtime_player) {

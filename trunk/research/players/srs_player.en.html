@@ -107,14 +107,14 @@
     <div class="container">
         <hr/>
         <span>
-            Note: You must follow<a href="https://github.com/ossrs/srs/wiki/SampleDemo">SRS DEMO</a>
-            Start and set up the server , all of the following links to view.
+            Note: You must follow the steps on <a href="https://github.com/ossrs/srs/wiki/v1_EN_SampleDemo">SRS DEMO</a>
+            to set up and start the server, before the following links will work.
         </span>
         <div class="accordion" id="main_accordion">
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse1">
-                        <strong>[1] SRS sample player streams: the original stream</strong>
+                        <strong>[1] Original stream</strong>
                     </span>
                 </div>
                 <div id="collapse1" class="accordion-body collapse">
@@ -127,7 +127,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse10">
-                        <strong>[2] SRS sample player streams: the original stream HLS</strong>
+                        <strong>[2] HLS stream</strong>
                     </span>
                 </div>
                 <div id="collapse10" class="accordion-body collapse">
@@ -140,20 +140,20 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse2">
-                        <strong>[3] SRS sample player streams: stream transcoding configuration LD</strong>
+                        <strong>[3] Transcoded stream (LD)</strong>
                     </span>
                 </div>
                 <div id="collapse2" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <a href="#" id="srs_publish_ld">rtmp://demo.srs.com/live/livestream_ld</a> <br/>
-                        <span>Added to the original stream<a href="http://ffmpeg.org/ffmpeg-filters.html#overlay">FFMPEG picture watermark</a></span>
+                        <span><a href="http://ffmpeg.org/ffmpeg-filters.html#overlay">FFMPEG overlay</a> added to the original stream</span>
                     </div>
                 </div>
             </div>
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse11">
-                        <strong>[4] SRS sample player streams: HLS stream transcoding configuration LD</strong>
+                        <strong>[4] Transcoded HLS stream (LD)</strong>
                     </span>
                 </div>
                 <div id="collapse11" class="accordion-body collapse">
@@ -166,7 +166,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse3">
-                        <strong>[5] SRS sample player streams: SD stream transcoding configuration</strong>
+                        <strong>[5] Transcoded stream (SD)</strong>
                     </span>
                 </div>
                 <div id="collapse3" class="accordion-body collapse">
@@ -179,7 +179,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse12">
-                        <strong>[6] SRS sample player streams: SD stream transcoding configuration HLS</strong>
+                        <strong>[6] Transcoded HLS stream (SD)</strong>
                     </span>
                 </div>
                 <div id="collapse12" class="accordion-body collapse">
@@ -192,7 +192,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse4">
-                        <strong>[7] SRS sample player streams: Forward the original stream</strong>
+                        <strong>[7] Forwarded stream</strong>
                     </span>
                 </div>
                 <div id="collapse4" class="accordion-body collapse">
@@ -205,7 +205,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse13">
-                        <strong>[8] SRS sample player streams: Forward the original stream HLS</strong>
+                        <strong>[8] Forwarded HLS stream</strong>
                     </span>
                 </div>
                 <div id="collapse13" class="accordion-body collapse">
@@ -218,7 +218,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse5">
-                        <strong>[9] SRS sample player streams : Forward stream transcoding configuration LD</strong>
+                        <strong>[9] Forwarded transcoded stream (LD)</strong>
                     </span>
                 </div>
                 <div id="collapse5" class="accordion-body collapse">
@@ -231,20 +231,20 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse14">
-                        <strong>[10] SRS sample player streams : Forward transcoding configuration LD stream HLS</strong>
+                        <strong>[10] Forwarded transcoded HLS stream (LD)</strong>
                     </span>
                 </div>
                 <div id="collapse14" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <a href="#" id="srs_publish_fw_ld_hls" target="_blank">http://demo.srs.com/forward/live/livestream_ld.m3u8</a> <br/>
-                        <span>Forwarding transcoding configuration LD stream HLS slice , all streams are automatically forwarded to support HLS.</span>
+                        <span>Forwarded transcoded HLS stream (LD), all streams are automatically forwarded to support HLS.</span>
                     </div>
                 </div>
             </div>
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse6">
-                        <strong>[11] SRS sample player streams : Forward transcoding configuration SD stream</strong>
+                        <strong>[11] Forwarded transcoded stream (SD)</strong>
                     </span>
                 </div>
                 <div id="collapse6" class="accordion-body collapse">
@@ -257,7 +257,7 @@
             <div class="accordion-group">
                 <div class="accordion-heading">
                     <span class="accordion-toggle" data-toggle="collapse" data-parent="#main_accordion" href="#collapse15">
-                        <strong>[12] SRS sample player streams : Forward transcoding configuration SD stream HLS</strong>
+                        <strong>[12] Forwarded transcoded HLS stream (SD)</strong>
                     </span>
                 </div>
                 <div id="collapse15" class="accordion-body collapse">

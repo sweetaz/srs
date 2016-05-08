@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1.<!DOCTYPE html>
 <html>
 <head>
     <title>SRS</title>
@@ -33,12 +33,13 @@
     <div class="alert alert-info fade in" id="txt_log">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong><span id="txt_log_title">Usage:</span></strong>
-        <span id="txt_log_msg">set encoding parameters, click "Post Video", to allow access to the camera Flash plug flow</span>
+        <span id="txt_log_msg">Allow the Flash plugin to access your camera, set encoding parameters, and click "Post Video" to start stream.</span>
     </div>
     <div class="control-group">
         <div class="form-inline">
-            <button class="btn" id="btn_video_settings">Video Encoding</button>
-            <button class="btn" id="btn_audio_settings">Audio Encoding</button>
+            Encoding:
+            <button class="btn" id="btn_video_settings">Video</button>
+            <button class="btn" id="btn_audio_settings">Audio</button>
         </div>
     </div>
     <div class="control-group">
@@ -50,17 +51,17 @@
     </div>
     <div class="control-group">
         <div class="form-inline">
-            Play Address
-            1.<a id="txt_play_realtime" class="input-xxlarge" href="#">RTMP low latency (click to open)</a>
-            2.<a id="txt_play_url" class="input-xxlarge" href="#">RTMP transcoded (click to open)</a>
-            3.<a id="txt_play_hls" class="input-xxlarge" href="#">HLS-m3u8 (right-click to open or copy)</a>
-            4.<a id="txt_play_jwplayer" class="input-xxlarge" href="#">HLS-JWPlayer (click to open)</a>
+            Play Address (click to open, right-click to copy)
+            1. <a id="txt_play_realtime" class="input-xxlarge" href="#">RTMP low latency</a>
+            2. <a id="txt_play_url" class="input-xxlarge" href="#">RTMP transcoded</a>
+            3. <a id="txt_play_hls" class="input-xxlarge" href="#">HLS m3u8</a>
+            4. <a id="txt_play_jwplayer" class="input-xxlarge" href="#">HLS JWPlayer</a>
         </div>
     </div>
     <div id="video_modal" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Video Coding</h3>
+            <h3>Video Encoding Parameters</h3>
         </div>
         <div class="modal-body">
             <div class="form-horizontal">
@@ -132,7 +133,7 @@
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="sl_fps">
-                        Frame rate
+                        Framerate
                         <a id="sl_fps_tips" href="#" data-toggle="tooltip" data-placement="right" title="">
                             <img src="img/tooltip.png"/>
                         </a>
@@ -161,7 +162,7 @@
     <div id="audio_modal" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Audio Coding</h3>
+            <h3>Audio Encoding Parameters</h3>
         </div>
         <div class="modal-body">
             <div class="form-horizontal">
@@ -199,7 +200,7 @@
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <span class="accordion-toggle">
-                            <strong>Local Camera</strong>
+                            <strong>Local Publisher</strong>
                         </span>
                     </div>
                     <div class="accordion-body collapse in">
@@ -213,9 +214,9 @@
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <span class="accordion-toggle">
-                            <strong>The Remote Server</strong>
+                            <strong>Remote Player</strong>
                             <a id="remote_tips" href="#" data-toggle="tooltip" data-placement="top" title="">
-                                Black Screen<img src="img/tooltip.png"/>
+                                (Transcoded)<img src="img/tooltip.png"/>
                             </a>
                             <a id="remote_player_url" href="#" data-toggle="tooltip" data-placement="top" title="">
                                 Playback Address<img src="img/tooltip.png"/>
@@ -237,9 +238,9 @@
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <span class="accordion-toggle">
-                            <strong>Remote Server</strong>
+                            <strong>Remote Player</strong>
                             <a id="low_latecy_tips" href="#" data-toggle="tooltip" data-placement="top" title="">
-                                Low Latency<img src="img/tooltip.png"/>
+                                (Low Latency)<img src="img/tooltip.png"/>
                             </a>
                             <a id="realtime_player_url" href="#" data-toggle="tooltip" data-placement="top" title="">
                                 Playback Address<img src="img/tooltip.png"/>
@@ -406,10 +407,10 @@
 
         var hls_url = "http://" + ret.server + ":" + query.http_port + "/" + ret.app + "/" + ret.stream + ".m3u8";
 
-        $("#txt_play_realtime").text("RTMP low latency (click to open)").attr("href", srs_player_rt_url).attr("target", "_blank");
-        $("#txt_play_url").text("RTMP transcoded (click to open)").attr("href", srs_player_url).attr("target", "_blank");
-        $("#txt_play_hls").text("HLS-m3u8 (right-click to open or copy)").attr("href", hls_url).attr("target", "_blank");
-        $("#txt_play_jwplayer").text("HLS-JWPlayer (click to open)").attr("href", jwplayer_url).attr("target", "_blank");
+        $("#txt_play_realtime").text("RTMP low latency").attr("href", srs_player_rt_url).attr("target", "_blank");
+        $("#txt_play_url").text("RTMP transcoded").attr("href", srs_player_url).attr("target", "_blank");
+        $("#txt_play_hls").text("HLS m3u8").attr("href", hls_url).attr("target", "_blank");
+        $("#txt_play_jwplayer").text("HLS JWPlayer").attr("href", jwplayer_url).attr("target", "_blank");
     }
     function on_user_publish() {
         if ($("#btn_publish").text() == "Stop publishing") {
