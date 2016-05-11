@@ -285,41 +285,41 @@ Forwarding transcoding configuration SD stream HLS slice , all streams are autom
             <div>
                 <div class="btn-group dropup">
                     <button class="btn dropdown-toggle" data-toggle="dropdown">
-                        Setting full screen size ratio<span class="caret"></span>
+                        Full screen size/ratio <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a id="btn_fs_size_screen_100" href="#">Screen Size (100%)</a></li>
-                        <li><a id="btn_fs_size_screen_75" href="#">Screen Size (75%)</a></li>
-                        <li><a id="btn_fs_size_screen_50" href="#">Screen Size (50%)</a></li>
-                        <li><a id="btn_fs_size_video_100" href="#">Video size (100%)</a></li>
-                        <li><a id="btn_fs_size_video_75" href="#">Video size (75%)</a></li>
-                        <li><a id="btn_fs_size_video_50" href="#">Video size (50%)</a></li>
+                        <li><a id="btn_fs_size_screen_100" href="#">100% screen size</a></li>
+                        <li><a id="btn_fs_size_screen_75" href="#">75% screen size</a></li>
+                        <li><a id="btn_fs_size_screen_50" href="#">50% screen size</a></li>
+                        <li><a id="btn_fs_size_video_100" href="#">100% video size</a></li>
+                        <li><a id="btn_fs_size_video_75" href="#">75% video size</a></li>
+                        <li><a id="btn_fs_size_video_50" href="#">50% video size</a></li>
                     </ul>
                 </div>
                 <div class="btn-group dropup">
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">Set Aspect Ratio<span class="caret"></span></button>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">Aspect Ratio <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li><a id="btn_dar_original" href="#">Video original proportions</a></li>
-                        <li><a id="btn_dar_21_9" href="#">Widescreen Cinema (21:9)</a></li>
-                        <li><a id="btn_dar_16_9" href="#">Widescreen TV (16:9)</a></li>
+                        <li><a id="btn_dar_original" href="#">Original size </a></li>
+                        <li><a id="btn_dar_21_9" href="#">Cinema widescreen (21:9)</a></li>
+                        <li><a id="btn_dar_16_9" href="#">TV widescreen (16:9)</a></li>
                         <li><a id="btn_dar_4_3" href="#">Narrow screen (4:3)</a></li>
-                        <li><a id="btn_dar_fill" href="#">Filling ( the proportion of container )</a></li>
+                        <li><a id="btn_dar_fill" href="#">Fill window</a></li>
                     </ul>
                 </div>
                 <div class="btn-group dropup">
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">设置缓冲区大小<span class="caret"></span></button>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">Buffer size <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li><a id="btn_bt_0_1" href="#">0.1 seconds ( in real time )</a></li>
-                        <li><a id="btn_bt_0_2" href="#">0.2 seconds ( in real time )</a></li>
-                        <li><a id="btn_bt_0_3" href="#">0.3 seconds ( in real time )</a></li>
-                        <li><a id="btn_bt_0_5" href="#">0.5 seconds ( in real time )</a></li>
-                        <li><a id="btn_bt_0_8" href="#">0.8 seconds ( conference )</a></li>
-                        <li><a id="btn_bt_1" href="#">1 second ( low latency )</a></li>
-                        <li><a id="btn_bt_2" href="#">2 seconds ( less delay)</a></li>
-                        <li><a id="btn_bt_3" href="#">3 seconds ( smooth playback )</a></li>
-                        <li><a id="btn_bt_5" href="#">5 seconds ( lower speed )</a></li>
-                        <li><a id="btn_bt_10" href="#">10 seconds ( delay does not matter )</a></li>
-                        <li><a id="btn_bt_30" href="#">30 seconds ( first fluid )</a></li>
+                        <li><a id="btn_bt_0_1" href="#">0.1s (realtime)</a></li>
+                        <li><a id="btn_bt_0_2" href="#">0.2s (realtime)</a></li>
+                        <li><a id="btn_bt_0_3" href="#">0.3s (realtime)</a></li>
+                        <li><a id="btn_bt_0_5" href="#">0.5s (realtime)</a></li>
+                        <li><a id="btn_bt_0_8" href="#">0.8s (conference)</a></li>
+                        <li><a id="btn_bt_1" href="#">1s (low latency)</a></li>
+                        <li><a id="btn_bt_2" href="#">2s (less delay)</a></li>
+                        <li><a id="btn_bt_3" href="#">3s (smooth playback)</a></li>
+                        <li><a id="btn_bt_5" href="#">5s (lower speed)</a></li>
+                        <li><a id="btn_bt_10" href="#">10s (delay does not matter)</a></li>
+                        <li><a id="btn_bt_30" href="#">30s (first fluid)</a></li>
                     </ul>
                 </div>
                 <div class="btn-group dropup">
@@ -330,12 +330,12 @@ Forwarding transcoding configuration SD stream HLS slice , all streams are autom
                     <button id="btn_resume" class="btn hide">Resume</button>
                 </div>
                 <div class="btn-group dropup">
-                    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close Player</button>
+                    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
                 </div>
             </div>
             <div class="hide" id="fullscreen_tips">
-                请<font color="red">Click on the video</font>Enter full-screen mode~<br/>
-                For security reasons , Flash can not use JS to trigger full-screen
+                <font color="red">Click on the video</font> to enter full-screen mode<br/>
+                (for security reasons, Flash can not use JS to trigger full-screen)
             </div>
             <div>
                 <div class="input-prepend div_play_time" title="Video playback fluency">
